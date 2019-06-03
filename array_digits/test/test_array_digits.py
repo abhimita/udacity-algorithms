@@ -25,4 +25,6 @@ class TestArrayDigits(unittest.TestCase):
             self.assertTrue('Array length is no sufficient to return two numbers' in context.exception)
 
 if __name__ == '__main__':
-    unittest.main()
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestArrayDigits)
+    unittest.TextTestRunner(verbosity=2).run(suite)
+    #unittest.main()
