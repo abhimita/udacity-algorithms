@@ -13,7 +13,7 @@ There are two directories.
 To execute the code from command line, following steps are needed.
 
 1. `cd <directory where code is checked out>`
-2. `PYTHONPATH=array_digits/src python active_directory/test/test_array_digits.py`
+2. `PYTHONPATH=array_digits/src python array_digits/test/test_array_digits.py`
 
 ### Output
 ```
