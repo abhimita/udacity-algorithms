@@ -35,8 +35,15 @@ OK
 
 ### Why does it work?
 
-<br>
 Assume our initial guess is `g` and square(g) or `g * g` < n. 
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=g&space;*&space;g&space;$\leq$n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;*&space;g&space;$\leq$n" title="g * g $\leq$n" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g&space;$\leq$n/g" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;$\leq$n/g" title="g $\leq$n/g" /></a>
+
+If we take average of `g` and `n/g` or in other words
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" title="\frac{1}{2}*(g + \frac{n}{g})" /></a>
+
+will give a new guess which is greater than `g` and is used as new estimate for square root.
+
