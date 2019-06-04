@@ -45,5 +45,17 @@ If we take average of `g` and `n/g` or in other words
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" title="\frac{1}{2}*(g + \frac{n}{g})" /></a>
 
-will give a new guess which is greater than `g` and is used as new estimate for square root.
+will give a new guess which is greater than `g` and bring the new estimate closer to the square root.
+
+If it is other way round then
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=g&space;*&space;g&space;$\geq$n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;*&space;g&space;$\geq$n" title="g * g $\geq$n" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=g&space;$\geq$&space;n/g" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;$\geq$&space;n/g" title="g $\geq$ n/g" /></a>
+
+Taking average of `g` and `n/g` brings is closer to `g`
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{2}*(g&space;&plus;&space;\frac{n}{g})" title="\frac{1}{2}*(g + \frac{n}{g})" /></a>
+
+Iteration continues till the estimate converges.
 
