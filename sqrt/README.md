@@ -35,6 +35,7 @@ OK
 
 ### Why does it work?
 
+<br>
 Assume our initial guess is `g` and square(g) or `g * g` < n. 
 <a href="https://www.codecogs.com/eqnedit.php?latex=g&space;*&space;g&space;$\leq$n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;*&space;g&space;$\leq$n" title="g * g $\leq$n" /></a>
 
