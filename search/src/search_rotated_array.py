@@ -36,12 +36,17 @@ class SearchRotatedArray:
                 return left if input_list[left] >= input_list[left + 1] else left + 1
             else:
                 mid = int((left + right) / 2)
+                # Element at index = mid is greater than element to its left & right
                 if input_list[mid] > input_list[mid - 1] and input_list[mid] > input_list[mid + 1]:
                     return mid
+                # Element as index = mid is less than element to its left and its right
+                # Then max element is at position (mid - 1)
                 elif input_list[mid - 1] > input_list[mid] and input_list[mid] < input_list[mid + 1]:
                     return mid - 1
-                elif input_list[mid] < input_list[mid - 1] and input_list[mid + 1] < input_list[mid]:
+                # Pivot point appears on the left
+                elif input_list[0] > input_list[mid + 1]:
                     return SearchRotatedArray.find_max_index(input_list, left, mid - 1)
+                # Ascending section of the array
                 else:
                     return SearchRotatedArray.find_max_index(input_list, mid + 1, right)
 
@@ -52,5 +57,3 @@ class SearchRotatedArray:
                 return index
         return -1
 
-if __name__ == '__main__':
-    print(SearchRotatedArray.rotated_array_search([6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4], 2))

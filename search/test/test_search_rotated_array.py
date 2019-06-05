@@ -29,5 +29,12 @@ class TestSearchRotatedArray(unittest.TestCase):
             SearchRotatedArray.linear_search([6, 7, 8, 1, 2, 3, 4], 10)
         )
 
+    def test_search_rotated_array_pivot_point_is_at_the_start(self):
+        self.assertEqual(
+            SearchRotatedArray.rotated_array_search([10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 10),
+            SearchRotatedArray.linear_search([10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 10)
+        )
+
 if __name__ == '__main__':
-    unittest.main()
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestSearchRotatedArray)
+    unittest.TextTestRunner(verbosity=2).run(suite)

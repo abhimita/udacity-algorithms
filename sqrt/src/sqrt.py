@@ -14,6 +14,8 @@ class Sqrt:
     # Iteration continues till convergence is achieved
     @staticmethod
     def sqrt(number, start=1.0):
+        if number < 0:
+            raise ValueError('Square root of a negative number can not be computed')
         while abs(start * start - number) > 0.1:
             start = (start + number / start) * 0.5
         return int(start)

@@ -31,4 +31,3 @@ class TestZeroOneTwoSorter(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestZeroOneTwoSorter)
     unittest.TextTestRunner(verbosity=2).run(suite)
-    #unittest.main()

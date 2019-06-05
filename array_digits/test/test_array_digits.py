@@ -27,4 +27,3 @@ class TestArrayDigits(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestArrayDigits)
     unittest.TextTestRunner(verbosity=2).run(suite)
-    #unittest.main()
