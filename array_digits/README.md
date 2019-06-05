@@ -5,7 +5,7 @@ An array of integer is given. Two number need to be formed from array elements s
 ## Directory organization
 
 There are two directories. 
-1. `src` - contains the source code for active directory searching
+1. `src` - contains the source code
 2. `test` - contains the unit test cases. 
 
 ## Execution
