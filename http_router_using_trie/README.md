@@ -17,17 +17,16 @@ There are two directories.
 To execute the code from command line, following steps are needed.
 
 1. `cd <directory where code is checked out>`
-2. `PYTHONPATH=sqrt/src python sqrt/test/test_sqrt.py`
+2. `PYTHONPATH=http_router_using_trie/src python http_router_using_trie/test/test_router.py`
 
 ### Output
 ```
-test_sqrt_for_perfect_square (__main__.TestSqrt) ... ok
-test_sqrt_when_number_is_not_perfect_square (__main__.TestSqrt) ... ok
-test_sqrt_when_number_is_smallest_prime (__main__.TestSqrt) ... ok
-test_sqrt_when_number_is_zero (__main__.TestSqrt) ... ok
+test_router_with_invalid_path (__main__.TestRouter) ... ok
+test_router_with_url_having_trailing_slash (__main__.TestRouter) ... ok
+test_router_with_url_not_found (__main__.TestRouter) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.000s
+Ran 3 tests in 0.000s
 
 OK
 ```
@@ -35,5 +34,16 @@ OK
 
 ## Code design
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sqrt_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sqrt_n" title="\sqrt_n" /></a> will be a number that lies between [1,n]. We start with initial guess of `1` for <a href="https://www.codecogs.com/eqnedit.php?latex=\sqrt_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sqrt_n" title="\sqrt_n" /></a> We iterate till the absolute difference between square of the solution reached so far and the number is more than `0.1`
+Router functions are implemented by `Router` class. Router uses trie data structure. Trie data structure is implemented in `RouteTrie` class which uses `RouteTrieNode` for presentation of individual nodes of trie.
+
+`RouteTrieNode`: Provides method to insert a path component as a child after checking that the path component doesn't exist already
+
+`RouteTrie`:
+- Initialization method create the trie root with "/" as every URL path starts with "/"
+- Insert method allows adding path compoments into trie (given a full path). It traverses the path recursively and delegates the insertion work to class `TrieNode` when child node need to be created.
+- Find method allows traversing the tree following the given path components
+
+`Router`:
+- `add_handler`: allows associating a handler to a new path which doesn't exist already
+- `find`: returns the handler given the path
 
