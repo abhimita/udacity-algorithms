@@ -1,6 +1,6 @@
 # Introduction
 
-Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal. Python's sorting functions should not be used.
+In this problem, we will look for smallest and largest integer from a list of unsorted integers. The code should run in O(n) time. Do not use Python's inbuilt functions to find min and max.
 
 ## Directory organization
 
