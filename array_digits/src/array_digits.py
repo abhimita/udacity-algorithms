@@ -2,6 +2,10 @@
 Implements Merge sort. Sorting is done in-place.
 """
 class MergeSort:
+    """
+    Parameters:
+        array: Array to be sort
+    """
     @staticmethod
     # Recursive method for merge sort
     def sort(array):
@@ -20,6 +24,10 @@ class MergeSort:
 
     """
     Merges two sorted arrays. Final array is sorted in descending order
+    Parameters:
+        first: First array
+        second: Second array
+        array: Array containing descending sorted numbers   
     """
     @staticmethod
     def merge(first, second, array):
@@ -54,6 +62,10 @@ Class that solves the problem of generating two numbers from initegers in the ar
 so that the sum of the two number is maximum obeying the constraints listed in the problem
 """
 class ArrayDigits:
+    """
+    Parameters:
+        array: Array containing the digits from which two numbers need to be formed
+    """
     @staticmethod
     def rearrange_digits(array):
         sz = len(array)
@@ -81,6 +93,3 @@ class ArrayDigits:
             else:
                 second += str(element)
         return [int(first), int(second)]
-
-
-
