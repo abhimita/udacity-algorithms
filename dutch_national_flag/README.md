@@ -50,7 +50,9 @@ For example
 0 1                 2
 
 </pre>
-During the iteration pointers `0` and `1` moves towards right while pointer `2` moves towards left. For the above situation pointer `1` is moved one place to the right and all other pointers remain in their position. 
+During the iteration pointers `0` and `1` moves towards right while pointer `2` moves towards left. 
+
+The first execution for the above situation pointer `1` is moved one place to the right and all other pointers remain in their position. 
 
 <pre>
 
