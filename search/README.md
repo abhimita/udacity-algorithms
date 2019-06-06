@@ -39,7 +39,7 @@ OK
 
 ## Code design
 
-This is a modified version of binary search. Regular binary search will let us find the presence or absence of an element in sorted array in <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+This is a modified version of binary search. Normal binary search will let us find the presence or absence of an element in sorted array in <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
 
 In this problem the sorted array is pivoted at a point. The first step is to find the pivot point. Numbers to the left of pivot point remains sorted in ascending order. Same is true for the numbers to the right of the pivot point. In the above example the pivot point is where element 7 is located.
 
