@@ -30,4 +30,4 @@ OK
 
 ## Code design
 
-The list of numbers is scanned. Two variables are used - one to hold the max value and other one to hold the min value. For every element in the list, a comparison is made whether the element is bigger(smaller) than the max(min) value seen so far. The variables are updated appropriately. This way the max & min values are determined in a single pass with time complexity O(n)
+The list of numbers is scanned sequentially. Two variables are used - one to hold the max value and other one to hold the min value. For every element in the list, a comparison is made whether the element is bigger(smaller) than the max(min) value seen so far. The variables are updated appropriately. This way the max & min values are determined in a single pass with time complexity O(n)
