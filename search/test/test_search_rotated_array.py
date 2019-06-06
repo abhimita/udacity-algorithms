@@ -35,6 +35,18 @@ class TestSearchRotatedArray(unittest.TestCase):
             SearchRotatedArray.linear_search([10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 10)
         )
 
+    def test_search_rotated_array_with_two_element(self):
+        self.assertEqual(
+            SearchRotatedArray.rotated_array_search([10, 1], 10),
+            SearchRotatedArray.linear_search([10, 1], 10)
+        )
+
+    def test_search_rotated_array_one(self):
+        self.assertEqual(
+            SearchRotatedArray.rotated_array_search([11], 11),
+            SearchRotatedArray.linear_search([11], 11)
+        )
+
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestSearchRotatedArray)
     unittest.TextTestRunner(verbosity=2).run(suite)
