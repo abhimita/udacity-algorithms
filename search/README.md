@@ -27,19 +27,21 @@ To execute the code from command line, following steps are needed.
 test_search_rotated_array_for_max_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_for_min_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_for_number_not_present (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_one (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_pivot_point_is_at_the_start (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_min_element_is_near_middle (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_search_element_is_in_first_position (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_with_two_element (__main__.TestSearchRotatedArray) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.000s
+Ran 8 tests in 0.000s
 
 OK
 ```
 
 ## Code design
 
-This is a modified version of binary search. Regular binary search will let us find the presence or absence of an element in sorted array in <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+This is a modified version of binary search. Normal binary search will let us find the presence or absence of an element in sorted array in <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
 
 In this problem the sorted array is pivoted at a point. The first step is to find the pivot point. Numbers to the left of pivot point remains sorted in ascending order. Same is true for the numbers to the right of the pivot point. In the above example the pivot point is where element 7 is located.
 

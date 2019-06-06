@@ -34,16 +34,27 @@ OK
 
 ## Code design
 
-Router functions are implemented by `Router` class. Router uses trie data structure. Trie data structure is implemented in `RouteTrie` class which uses `RouteTrieNode` for presentation of individual nodes of trie.
+There are three classes in the implementation.
 
-`RouteTrieNode`: Provides method to insert a path component as a child after checking that the path component doesn't exist already
+1. `RouterTrieNode`
+2. `RouterTrie`
+3. `Router`
 
-`RouteTrie`:
+`RouteTrieNode`: Provides template for the node in a trie. It defines the instance variables that consists of (1) `value` (2) `handler` and (3) `children`
+
+This class provides method to insert a path component as a child after checking that the path component doesn't already exist.
+
+URL specified as `/a/b/c` is defined to have 3 path components `a`, `b` & `c` and a special node `/` (root node)
+
+`RouterTrie`: Provides template for trie.
+
+This class provides 
 - Initialization method create the trie root with "/" as every URL path starts with "/"
 - Insert method allows adding path compoments into trie (given a full path). It traverses the path recursively and delegates the insertion work to class `TrieNode` when child node need to be created.
-- Find method allows traversing the tree following the given path components
+- Find method allows traversing the tree following the given path components and returns a handler to the node
 
-`Router`:
-- `add_handler`: allows associating a handler to a new path which doesn't exist already
-- `find`: returns the handler given the path
+`Router`: Router is the top level class that uses trie data structure. 
+
+- `add_handler`: allows associating a handler to a new path if doesn't exist already
+- `lookup`: returns the handler given the path
 

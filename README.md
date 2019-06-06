@@ -52,6 +52,10 @@ There are many different implementations of HTTP Routers such as regular express
 
 The purpose of an HTTP Router is to take a URL path like "/", "/about", or "/blog/2019-01-15/my-awesome-blog-post" and figure out what content to return. In a dynamic web server, the content will often come from a block of code called a handler
 
+7. Auto complete using Trie
+
+Here we are using a trie data structure to autocomplete words as prefixes are typed in.
+
 Every directory had two subdirectories.
 
 1. `src`: contains the source code for the solution
