@@ -27,12 +27,14 @@ To execute the code from command line, following steps are needed.
 test_search_rotated_array_for_max_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_for_min_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_for_number_not_present (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_one (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_pivot_point_is_at_the_start (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_min_element_is_near_middle (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_search_element_is_in_first_position (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_with_two_element (__main__.TestSearchRotatedArray) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.000s
+Ran 8 tests in 0.000s
 
 OK
 ```
