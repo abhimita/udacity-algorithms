@@ -6,7 +6,7 @@ This repository contains Python based solutions for Udacity algorithms course
 
 The repository contains six directories. These are:
 
-**1. `sqrt`:**
+**1. Square root of an integer (`sqrt`):**
 
 We need to find the square root of a number with Python's math library. The floor value of the square root should be returned.
 
@@ -14,7 +14,7 @@ For example if the given number is 16, then the answer would be 4.
 
 If the given number is 27, the answer would be 5 because sqrt(5) = 5.196 whose floor value is 5. The expected time complexity is O(log(n))
 
-**2. `search`:**
+**2. Search in a rotated sorted array (`search`):**
 
 A sorted array which is rotated at some random pivot point.
 
@@ -26,7 +26,7 @@ Example:
 
 Input: nums = [4,5,6,7,0,1,2], target = 0, Output: 4
 
-**3. `array_digits`:**
+**3. Rearrange array elements (`array_digits`):**
 
 An array of integer is given. Two number need to be formed from array elements such that their sum is maximum. All array elements are in the range [0, 9]. The number of digits in both the numbers cannot differ by more than 1. Python's sorting function can't be used and the expected time complexity is O(nlog(n)).
 
@@ -34,19 +34,19 @@ for e.g. [1, 2, 3, 4, 5]
 
 The expected answer would be [531, 42]. Another expected answer can be [542, 31]. In scenarios such as these when there are more than one possible answers, any one pair is returned.
 
-**4. `dutch_national_flag`:**
+**4. Dutch National flag problem (`dutch_national_flag`):**
 
 Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal. Python's sorting functions should not be used.
 
-**5. Auto complete using Trie:**
+**5. Auto complete using Trie (`trie`):**
 
 Here we are using a trie data structure to autocomplete words as prefixes are typed in.
 
-**6. `min_max`:**
+**6. Max and min in a unsorted array (`min_max`):**
 
 In this problem, we will look for smallest and largest integer from a list of unsorted integers. The code should run in O(n) time. Do not use Python's inbuilt functions to find min and max.
 
-**7. `http_router_using_trie`:**
+**7. HTTP router using trie (`http_router_using_trie`):**
 
 For this exercise we are going to implement an HTTPRouter like you would find in a typical web server using the Trie data structure we learned previously.
 
