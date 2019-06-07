@@ -18,12 +18,14 @@ To execute the code from command line, following steps are needed.
 ### Output
 ```
 test_sort_already_sorted_array (__main__.TestZeroOneTwoSorter) ... ok
+test_sort_int_other_than_0_1_2 (__main__.TestZeroOneTwoSorter) ... ok
 test_sort_with_array_starting_with_two_ending_with_one (__main__.TestZeroOneTwoSorter) ... ok
 test_sort_with_array_starting_with_zero_ending_with_two (__main__.TestZeroOneTwoSorter) ... ok
 test_sort_with_empty_array (__main__.TestZeroOneTwoSorter) ... ok
+test_sort_with_string_as_element (__main__.TestZeroOneTwoSorter) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.001s
+Ran 6 tests in 0.001s
 
 OK
 ```
@@ -113,3 +115,12 @@ As pointer `1` now points to value `0`, it needs to complete another swap with e
 As a single pass is made of the elements of list, time complexity is O(n)
 
 </pre>
+
+### Time complexity
+
+`1` pointer and `2` pointers start from two opposite ends of the array. `1` pointers moves towards left and `2` pointer moves towards right. Loop iteration continues till two pinters cross each other. That means every element of the array needs to be examined. Thus time complexity is O(n)
+
+### Space complexity
+
+The algorithm doesn't require any additional storage other than storage for 3 pointers. So space complexity is O(1)
+
