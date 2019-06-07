@@ -17,13 +17,17 @@ To execute the code from command line, following steps are needed.
 
 ### Output
 ```
+test_rearrange_digits_when_array_is_empty (__main__.TestArrayDigits) ... ok
 test_rearrange_digits_when_even_number_of_elements (__main__.TestArrayDigits) ... ok
 test_rearrange_digits_when_odd_number_of_elements (__main__.TestArrayDigits) ... ok
+test_rearrange_digits_when_one_element_is_float (__main__.TestArrayDigits) ... ok
+test_rearrange_digits_when_one_element_is_string (__main__.TestArrayDigits) ... ok
+test_rearrange_digits_when_one_element_is_two_digited (__main__.TestArrayDigits) ... ok
 test_rearrange_digits_with_one_element (__main__.TestArrayDigits) ... ok
 test_rearrange_digits_with_two_elements (__main__.TestArrayDigits) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.000s
+Ran 8 tests in 0.001s
 
 OK
 ```
@@ -37,4 +41,14 @@ It will be best to have the array sorted. As the problem states not to use Pytho
 
 Once the array is sorted in descending order, digits from the array is picked up one at a time. If there are odd number of digits that means that two numbers will differ by one digit. For odd number of digits, the highest digit is used in the leading position of the first number. After that we are left with even number of digits.
 
-Each digits is pulled out from descending ordered array and used alternately in the remaining leading place values of first and second number. This loop will get executed O(n) times. The dominating term will be for time complexity will be <a href="https://www.codecogs.com/eqnedit.php?latex=O(nlog_2{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(nlog_2{n})" title="O(nlog_2{n})" /></a>
+Each digits is pulled out from descending ordered array and used alternately in the remaining leading place values of first and second number. 
+
+### Time Complexity
+
+We are using merge sort to do the initial sort of array element. Mergesort will have time complexity of <a href="https://www.codecogs.com/eqnedit.php?latex=O(nlog_2{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(nlog_2{n})" title="O(nlog_2{n})" /></a> 
+
+The subsequent loop will iterate for n times having time complexity O(n). Out of these two terms dominating term will come from merge sort hence complexity is <a href="https://www.codecogs.com/eqnedit.php?latex=O(nlog_2{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(nlog_2{n})" title="O(nlog_2{n})" /></a>
+
+### Space complexity
+
+Merge sort will require additional space of O(n). Additional number of recursive calls for merge sort in O(logn) as it will have O(logn) stack entries. There is some need of constant space for loop variables, two numbers that get formed. Out of all these the dominating term in O(n). Overall space complexity in O(n)
