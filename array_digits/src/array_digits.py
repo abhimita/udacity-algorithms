@@ -58,7 +58,7 @@ class MergeSort:
             j += 1
 
 """
-Class that solves the problem of generating two numbers from initegers in the array
+Class that solves the problem of generating two numbers from integers in the array
 so that the sum of the two number is maximum obeying the constraints listed in the problem
 """
 class ArrayDigits:
@@ -66,11 +66,16 @@ class ArrayDigits:
     Parameters:
         array: Array containing the digits from which two numbers need to be formed
     """
+
     @staticmethod
     def rearrange_digits(array):
+        # Array should contain list of single digit integers
+        if not all(isinstance(x, int) and x in range(0, 10) for x in array):
+            raise Exception("Either the array contains non integer elements or integer is more than 9")
         sz = len(array)
+        # Array should be at least of length = 2
         if sz <= 1:
-            raise Exception("Array length is no sufficient to return two numbers")
+            raise Exception("Array length is not sufficient to return two numbers")
         # Sort the array in descending order
         MergeSort.sort(array)
         first = ''
