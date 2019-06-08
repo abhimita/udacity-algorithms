@@ -15,7 +15,7 @@ To execute the code from command line, following steps are needed.
 1. `cd <directory where code is checked out>`
 2. `PYTHONPATH=sqrt/src python sqrt/test/test_sqrt.py`
 
-As project submission rubric test class is also present in source file. So the following invocation will also work:
+As per Udacity project submission rubric test class is also copied into source file. So the following invocation will also work:
 
 ```PYTHONPATH=sqrt/src python sqrt/src/sqrt.py```
 
