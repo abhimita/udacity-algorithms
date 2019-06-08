@@ -51,4 +51,4 @@ The subsequent loop will iterate for n times having time complexity O(n). Out of
 
 ### Space complexity
 
-Merge sort will require additional space of O(n). Additional number of recursive calls for merge sort in O(logn) as it will have O(logn) stack entries. There is some need of constant space for loop variables, two numbers that get formed. Out of all these the dominating term in O(n). Overall space complexity in O(n)
+Merge sort will require additional space of O(n). There is some need of constant space for loop variables, two numbers that get formed. Out of all these the dominating term in O(n). Overall space complexity in O(n)
