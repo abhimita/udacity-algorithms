@@ -22,19 +22,24 @@ To execute the code from command line, following steps are needed.
 1. `cd <directory where code is checked out>`
 2. `PYTHONPATH=search/src python search/test/test_search_rotated_array.py`
 
+As per Udacity project submission rubric test class is also copied into source file so that the following invocation will also work.
+
+```PYTHONPATH=search/src python search/src/search_rotated_array.py```
+
 ### Output
 ```
-test_search_rotated_array_for_max_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
-test_search_rotated_array_for_min_element_when_list_has_non_contiguous_numbers (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_for_number_not_present (__main__.TestSearchRotatedArray) ... ok
-test_search_rotated_array_one (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_pivot_point_is_at_the_start (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_when_first_parameter_is_not_list (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_min_element_is_near_middle (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_when_search_element_is_in_first_position (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_when_second_parameter_is_not_int (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_with_one_element (__main__.TestSearchRotatedArray) ... ok
 test_search_rotated_array_with_two_element (__main__.TestSearchRotatedArray) ... ok
+test_search_rotated_array_zero_element (__main__.TestSearchRotatedArray) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.000s
+Ran 11 tests in 0.001s
 
 OK
 ```
