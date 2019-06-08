@@ -41,14 +41,23 @@ OK
 
 ## Code design
 
-This is a modified version of binary search. Normal binary search will let us find the presence or absence of an element in sorted array in <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+This is a modified version of binary search. 
 
 In this problem the sorted array is pivoted at a point. The first step is to find the pivot point. Numbers to the left of pivot point remains sorted in ascending order. Same is true for the numbers to the right of the pivot point. In the above example the pivot point is where element 7 is located.
 
 `find_max_index` determines the pivot point. It handles the special case of when the list has one or two elements. Both of which are trivial. When the list is having more than 2 elements then the middle element of the list is accessed. If it is more than the element to its left and to its right, then that is the maximum value in the list.
 
-Otherwise if the element at `index = 0` is greater than element at `index = mid` then the maximum value need to the search to the left of the middle index. Right portion should be search if the reverse is true. The same routine is called recursively after adjusting left (right) index indicating whether right(left) of the array is searched. Just like binary search size of the array gets decreased by factor 2. Thus the time complexity is <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+Otherwise if the element at `index = 0` is greater than element at `index = mid` then the maximum value need to the search to the left of the middle index. Right portion should be search if the reverse is true. The same routine is called recursively after adjusting left (right) index indicating whether right(left) of the array is searched. 
 
 Once the position of maximum value is known binary search is used to determine the absence or presence of the given element by comparing the value of the given element with that of element at `index=0` and the element at `index = pivot point - 1`. If the element falls within the range, then binary search can be used here as this segment of the array is sorted.
 
 Otherwise binary search can be used for segment of the array between `index = pivot point + 1` and end of the array. So the overall time complexity is <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+
+### Time complexity
+
+This is a modified version of binary search. Just like binary search size of the array gets decreased by factor 2. Thus the time complexity is <a href="https://www.codecogs.com/eqnedit.php?latex=O(log_2n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(log_2n)" title="O(log_2n)" /></a>
+
+### Space complexity
+
+The modified version of binary search requires additional space for loop variables, storing start and end pointers to list. These are of constant complexity O(1)
+
