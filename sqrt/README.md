@@ -15,15 +15,21 @@ To execute the code from command line, following steps are needed.
 1. `cd <directory where code is checked out>`
 2. `PYTHONPATH=sqrt/src python sqrt/test/test_sqrt.py`
 
+As project submission rubric test class is also present in source file. So the following invocation will also work:
+
+```PYTHONPATH=sqrt/src python sqrt/src/sqrt.py```
+
 ### Output
 ```
 test_sqrt_for_perfect_square (__main__.TestSqrt) ... ok
+test_sqrt_when_number_is_negative (__main__.TestSqrt) ... ok
+test_sqrt_when_number_is_not_a_number (__main__.TestSqrt) ... ok
 test_sqrt_when_number_is_not_perfect_square (__main__.TestSqrt) ... ok
 test_sqrt_when_number_is_smallest_prime (__main__.TestSqrt) ... ok
 test_sqrt_when_number_is_zero (__main__.TestSqrt) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.000s
+Ran 6 tests in 0.001s
 
 OK
 ```
