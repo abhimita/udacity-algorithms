@@ -21,7 +21,14 @@ class TestSqrt(unittest.TestCase):
     # Test when input is negative. Should throw exception
     def test_sqrt_when_number_is_negative(self):
         with self.assertRaises(Exception) as context:
-            self.assertTrue('Square root of a negative number can not be computed' in context.exception)
+            Sqrt.sqrt(-25)
+        self.assertTrue('Square root of a negative number can not be computed' in str(context.exception))
+
+    # Test when input is not a number. Should throw exception
+    def test_sqrt_when_number_is_not_a_number(self):
+        with self.assertRaises(Exception) as context:
+            Sqrt.sqrt('a')
+        self.assertTrue('The parameter (number) needs to be integer' in str(context.exception))
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestSqrt)

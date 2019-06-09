@@ -9,7 +9,9 @@ class TestSinglePassMinMaxFinder(unittest.TestCase):
 
     # The list is empty. Min & max values will be (None, None)
     def test_get_min_max_when_list_is_empty(self):
-        self.assertEqual(SinglePassMinMaxFinder.get_min_max([]), (None, None))
+        with self.assertRaises(Exception) as context:
+            SinglePassMinMaxFinder.get_min_max([])
+        self.assertTrue('Array length should be at least one for min-max finder to work' in str(context.exception))
 
     # The list is non-empty with more than 1 element
     def test_get_min_max_when_list_has_twenty_elements(self):
@@ -18,6 +20,11 @@ class TestSinglePassMinMaxFinder(unittest.TestCase):
         min_element = min(l)
         max_element = max(l)
         self.assertEqual(SinglePassMinMaxFinder.get_min_max(l), (min_element, max_element))
+
+    def test_get_min_max_when_passed_int_instead_of_list_of_int(self):
+        with self.assertRaises(Exception) as context:
+            SinglePassMinMaxFinder.get_min_max(5)
+        self.assertTrue('The parameter must be a list of integers' in str(context.exception))
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestSinglePassMinMaxFinder)

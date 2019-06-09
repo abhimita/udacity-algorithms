@@ -15,7 +15,14 @@ class TestRouter(unittest.TestCase):
         router.add_handler("/home/contact/email", "email handler")
         router.add_handler("/home/contact/facebook", "facebook handler")
         self.assertEqual(router.lookup("/home/cooking/recipe/"), "recipe handler")
-        self.assertEqual(router.lookup("/home/cooking/recipe/"), router.lookup("/home/cooking/recipe"))
+
+    def test_router_with_url_not_having_trailing_slash(self):
+        router = Router("root handler", "not found handler")
+        router.add_handler("/home/about/me", "me handler")
+        router.add_handler("/home/cooking/recipe", "recipe handler")
+        router.add_handler("/home/contact/email", "email handler")
+        router.add_handler("/home/contact/facebook", "facebook handler")
+        self.assertEqual(router.lookup("/home/cooking/recipe"), "recipe handler")
 
     def test_router_with_url_not_found(self):
         router = Router("root handler", "not found handler")

@@ -24,9 +24,23 @@ class TestZeroOneTwoSorter(unittest.TestCase):
             [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
         )
 
+    # Array contains elements other than 0, 1 & 2 as elements
+    def test_sort_int_other_than_0_1_2(self):
+        with self.assertRaises(Exception) as context:
+            ZeroOneTwoSorter.sort([0, 0, 9, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+        self.assertTrue('Elements are either not integer or integers other than 0, 1 or 2' in str(context.exception))
+
+    # Array contains elements other than 0, 1 & 2 as elements
+    def test_sort_with_string_as_element(self):
+        with self.assertRaises(Exception) as context:
+            ZeroOneTwoSorter.sort([0, 0, 'p', 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+        self.assertTrue('Elements are either not integer or integers other than 0, 1 or 2' in str(context.exception))
+
     # Array is to be sorted is empty (no elements)
     def test_sort_with_empty_array(self):
-        self.assertEqual(ZeroOneTwoSorter.sort([]), [])
+        with self.assertRaises(Exception) as context:
+            ZeroOneTwoSorter.sort([])
+        self.assertTrue('Array must be of nonzero length to be sorted' in str(context.exception))
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestZeroOneTwoSorter)
