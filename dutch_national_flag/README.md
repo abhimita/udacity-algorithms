@@ -15,6 +15,10 @@ To execute the code from command line, following steps are needed.
 1. `cd <directory where code is checked out>`
 2. `PYTHONPATH=dutch_national_flag/src python dutch_national_flag/test/test_sorting_zero_one_two.py`
 
+Test class is also copied into the main Python script. So the following invocation will also work.
+
+```PYTHONPATH=dutch_national_flag/src python dutch_national_flag/src/sorting_zero_one_two.py```
+
 ### Output
 ```
 test_sort_already_sorted_array (__main__.TestZeroOneTwoSorter) ... ok
