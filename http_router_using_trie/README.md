@@ -19,14 +19,19 @@ To execute the code from command line, following steps are needed.
 1. `cd <directory where code is checked out>`
 2. `PYTHONPATH=http_router_using_trie/src python http_router_using_trie/test/test_router.py`
 
+Test class is also copied into the source file as per Udacity submission rubric. So the following invocation will also work:
+
+```PYTHONPATH=http_router_using_trie/src python http_router_using_trie/src/router.py```
+
 ### Output
 ```
 test_router_with_invalid_path (__main__.TestRouter) ... ok
 test_router_with_url_having_trailing_slash (__main__.TestRouter) ... ok
 test_router_with_url_not_found (__main__.TestRouter) ... ok
+test_router_with_url_not_having_trailing_slash (__main__.TestRouter) ... ok
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.000s
+Ran 4 tests in 0.000s
 
 OK
 ```
@@ -58,3 +63,10 @@ This class provides
 - `add_handler`: allows associating a handler to a new path if doesn't exist already
 - `lookup`: returns the handler given the path
 
+### Time complexity
+
+Assume that there are W URLs are used in `add_handler` method. For every URL on an average `L` components are there. `add_handler` or `lookup` will have O(W * L) time complexity. 
+
+### Space complexity
+
+Space complexity is O(W * L) as well.
