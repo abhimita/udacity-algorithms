@@ -19,3 +19,21 @@ The implementation consists of two classes
 2. `Trie`: This class offers two methods
   - `insert`: inserts a word to trie
   - `find`: Find the Trie node that represents this prefix
+  
+### Time Complexity
+
+In trie data structure we are performing two types of operations.
+
+1. Insertion - Assume that there are W words in the list and average length of word in L. So to create the trie time complexity in O(W * L)
+
+2. Find - As insertion of new word always precedes finding so time complexity for finding also O(W * L)
+
+### Space Complexity
+
+Space complexity can be derived by examining number of nodes in trie. Number of nodes will vary depending on number of prefixes in comoon within th egiven word list.
+
+Let us assume best case scenario. Word list is ['abc', 'abd', 'abe', 'abf'] This will result in a trie having 7 nodes (including root node). Here each word has same prefix except the last character position. W * 1.5 + 1 where W = 4
+
+Example of worst case scenario will be ['abc', 'def', 'ghi', 'xyz']. This trie will have 13 nodes (W * 3 + 1) where W = 4
+
+This space complexity in O(W * L)
