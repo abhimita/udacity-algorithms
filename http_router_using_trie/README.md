@@ -58,3 +58,10 @@ This class provides
 - `add_handler`: allows associating a handler to a new path if doesn't exist already
 - `lookup`: returns the handler given the path
 
+### Time complexity
+
+Assume that there are W URLs are used in `add_handler` method. For every URL on an average `L` components are there. `add_handler` or `lookup` will have O(W * L) time complexity. 
+
+### Space complexity
+
+Space complexity is O(W * L) as well.
